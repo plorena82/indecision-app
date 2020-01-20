@@ -1,0 +1,34 @@
+.add-option-error{
+
+    color: $off-white;
+    font-style: italic;
+    margin: $med-size;
+    padding: 0 $med-size;
+}
+
+//by default the add option button and input will be shown one below the other.
+.add-option{
+    display: flex;
+    flex-direction: column;
+    padding: $med-size;
+}
+
+.add-option__input{
+    background: $dark-blue;
+    border-bottom: .3rem solid darken($dark-blue,10%);
+    flex-grow:1;
+    //margin-right: $s-size;
+    margin: 0 0 $s-size 0; //for small devices input will have a space between button
+    color: $off-white;
+    padding:$s-size;
+}
+
+//for devices or web with more than 45rem the add option will show the input and button in a row
+@media(min-width: $desktop-breakpoint){
+    .add-option{
+        flex-direction:row;
+    }
+    .add-option__input{
+        margin: 0 $s-size 0 0; //for devices or web with more than 45 rem/px margin right between input and button
+    }
+}

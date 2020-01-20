@@ -1,0 +1,42 @@
+//big button
+.big-button{
+    background: $purple;
+    border: none;
+    border-bottom: .6rem solid darken($purple,10%);
+    color: white;
+    font-weight: bold;
+    font-size: $lrg-size;
+    width:100%;
+    margin-bottom: $med-size;
+    padding: 2.4rem;
+}
+
+.big-button:disabled{
+    opacity:.5;
+}
+
+//button
+.button { 
+    background: $purple;
+    border: none;
+    border-bottom: .3rem solid darken($purple,10%);
+    color: white;
+    font-weight: 500;
+    padding: $s-size;
+}
+
+//bem adding a modifier to our .button style, in the className we put "button button--link" and will have all the button characteristics but modified by the modifier.
+.button--link {
+    background: none;
+    border:none;
+    color:$off-white;
+    padding:0;
+}
+
+@media(min-width:$desktop-breakpoint){
+
+    .big-button{
+        margin-bottom: $xl-size; 
+    }
+
+}
